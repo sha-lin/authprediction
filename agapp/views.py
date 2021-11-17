@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from agapp.permissions import IsAdminOrReadOnly
-from .models import Profile,Product
+from .models import Profile
 from django.contrib.auth.models import User
 from rest_framework.exceptions import NotFound
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -15,7 +15,7 @@ from rest_framework import status,generics
 from django.http import Http404
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializer import  ProfileSerializer, UserSerializer,UserCreateSerializer,ProductSerializer
+from .serializer import  ProfileSerializer, UserSerializer,UserCreateSerializer
 from .permissions import IsAdminOrReadOnly
 
 

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Profile,Product
+from .models import Profile
 # cloudinary
 from cloudinary.models import CloudinaryField
 # user
