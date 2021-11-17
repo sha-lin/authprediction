@@ -10,6 +10,7 @@ coreschema==0.0.4
 dj-database-url==0.5.0
 Django==3.2.9
 django-bootstrap-v5==1.0.5
+django-cors-headers==3.10.0
 django-heroku==0.3.1
 django-mathfilters==1.0.0
 django-registration==3.2
@@ -43,4 +44,3 @@ uritemplate==4.1.1
 urllib3==1.26.7
 whitenoise==5.3.0
 zipp==3.6.0
-django-cors-headers==3.10.0
