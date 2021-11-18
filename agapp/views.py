@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from agapp.permissions import IsAdminOrReadOnly
+# from agapp.permissions import IsAdminOrReadOnly
 from .models import Profile
 from django.contrib.auth.models import User
 from rest_framework.exceptions import NotFound
@@ -16,7 +16,7 @@ from django.http import Http404
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializer import  ProfileSerializer, UserSerializer,UserCreateSerializer
-from .permissions import IsAdminOrReadOnly
+# from .permissions import IsAdminOrReadOnly
 
 
 # Create your views here.
@@ -31,7 +31,7 @@ class UserList(APIView): # list all users
     """
     List all users.
     """
-    permission_classes = (IsAdminOrReadOnly,)
+    # permission_classes = (IsAdminOrReadOnly,)
 
     def get(self, request, format=None):
         users = User.objects.all()
@@ -42,7 +42,7 @@ class UserCreate(APIView): # create user
     """
     Create a user.
     """
-    permission_classes = (IsAdminOrReadOnly,)
+    # permission_classes = (IsAdminOrReadOnly,)
 
     def post(self, request, format=None):
         serializer = UserCreateSerializer(data=request.data)
@@ -81,7 +81,7 @@ class logoutUser(APIView): # logout user
 
 # ProfileList
 class ProfileList(APIView):
-    permission_classes = (IsAdminOrReadOnly,)
+    # permission_classes = (IsAdminOrReadOnly,)
 
     def get(self, request, format=None):
         all_profiles = Profile.objects.all()
@@ -98,7 +98,7 @@ class ProfileList(APIView):
 
 # ProfileDetail
 class ProfileDetail(APIView):
-    permission_classes = (IsAdminOrReadOnly,)
+    # permission_classes = (IsAdminOrReadOnly,)
 
     def get_object(self, pk):
         try:
